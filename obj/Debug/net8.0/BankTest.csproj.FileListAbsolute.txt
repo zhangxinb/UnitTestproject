@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\BankTest\bin\Debug\net8.0\BankTest.exe
+C:\Users\Administrator\source\repos\BankTest\bin\Debug\net8.0\BankTest.deps.json
+C:\Users\Administrator\source\repos\BankTest\bin\Debug\net8.0\BankTest.runtimeconfig.json
+C:\Users\Administrator\source\repos\BankTest\bin\Debug\net8.0\BankTest.dll
+C:\Users\Administrator\source\repos\BankTest\bin\Debug\net8.0\BankTest.pdb
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.AssemblyInfoInputs.cache
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.AssemblyInfo.cs
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.dll
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\refint\BankTest.dll
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.pdb
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\BankTest.genruntimeconfig.cache
+C:\Users\Administrator\source\repos\BankTest\obj\Debug\net8.0\ref\BankTest.dll
