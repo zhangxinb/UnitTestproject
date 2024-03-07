@@ -8,8 +8,10 @@ namespace UnitTestproject
         {
             // Arrange
             var fromAccount = new Account(1);
+            Assert.IsNotNull(fromAccount, "fromAccount is null");
             fromAccount.Transaction(100.0);
             var toAccount = new Account(2);
+            Assert.IsNotNull(toAccount, "toAccount is null");
             var amount = 50.0;
 
             // Act
