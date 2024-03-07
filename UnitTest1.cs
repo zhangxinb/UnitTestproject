@@ -46,5 +46,73 @@ namespace UnitTestproject
             // Act & Assert
             Assert.ThrowsException<ArgumentException>(() => new Transaction(fromAccount, toAccount, amount));
         }
+
+        [TestMethod]
+        public void AddTransaction_ValidAmountAndSufficientBalance_ShouldReturnTrue()
+        {
+            // Arrange
+            var bank = new Bank();
+            var fromAccount = bank.FindAccount(100000);
+            fromAccount.Transaction(100.0);
+            var toAccount = bank.FindAccount(100011);
+            var amount = 50.0;
+
+            // Act
+            var result = bank.AddTransaction(toAccount, fromAccount, amount);
+
+            // Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void AddTransaction_AmountExceedsBalance_ShouldReturnFalse()
+        {
+            // Arrange
+            var bank = new Bank();
+            var fromAccount = bank.FindAccount(100000);
+            fromAccount.Transaction(50.0);
+            var toAccount = bank.FindAccount(100011);
+            var amount = 100.0;
+
+            // Act
+            var result = bank.AddTransaction(toAccount, fromAccount, amount);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void AddTransaction_SameAccount_ShouldReturnFalse()
+        {
+            // Arrange
+            var bank = new Bank();
+            var fromAccount = bank.FindAccount(100000);
+            fromAccount.Transaction(100.0);
+            var amount = 50.0;
+
+            // Act
+            var result = bank.AddTransaction(fromAccount, fromAccount, amount);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
+        [TestMethod]
+        public void AddTransaction_NonExistentAccount_ShouldReturnFalse()
+        {
+            // Arrange
+            var bank = new Bank();
+            var fromAccount = bank.FindAccount(100000);
+            fromAccount.Transaction(100.0);
+            var toAccount = new Account(999999);
+            var amount = 50.0;
+
+            // Act
+            var result = bank.AddTransaction(toAccount, fromAccount, amount);
+
+            // Assert
+            Assert.IsFalse(result);
+        }
+
     }
 }
